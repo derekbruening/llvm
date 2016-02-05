@@ -99,6 +99,9 @@ struct InstrProfOptions {
 ModulePass *createInstrProfilingPass(
     const InstrProfOptions &Options = InstrProfOptions());
 
+// Insert DeadStoreTuner instrumentation
+FunctionPass *createDeadStoreTunerPass();
+
 // Insert AddressSanitizer (address sanity checking) instrumentation
 FunctionPass *createAddressSanitizerFunctionPass(bool CompileKernel = false,
                                                  bool Recover = false);
