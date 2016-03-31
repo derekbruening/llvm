@@ -116,6 +116,9 @@ ModulePass *createDataFlowSanitizerPass(
     const std::vector<std::string> &ABIListFiles = std::vector<std::string>(),
     void *(*getArgTLS)() = nullptr, void *(*getRetValTLS)() = nullptr);
 
+// Insert CacheFragSanitizer instrumentation
+FunctionPass *createCacheFragSanitizerPass();
+
 // Options for sanitizer coverage instrumentation.
 struct SanitizerCoverageOptions {
   SanitizerCoverageOptions()
